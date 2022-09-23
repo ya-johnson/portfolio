@@ -1,9 +1,11 @@
 <script>
+  import Transition from '../lib/components/transition.svelte';
   import Nav from '../lib/components/nav.svelte'
   import Title from '../lib/svg/title.svelte'
   import Polygon from '../lib/svg/polygon.svelte';
 </script>
 
+<Transition />
 <Nav />
 <main>
   <section class="hero container">
@@ -23,11 +25,11 @@
         <p>
            I have an intrest in making things and making them good, <br/>
            even just for the sake of solving interesting problems. <br/>
-  
            I think that a mix of loosenss and firmness in any <br/>
-           process are key to find creative yet smart solutions. <br/>
-  
-           I'm driven by curiousity, and as such it's importent fo me <br/>
+           process is key to find creative yet smart solutions. <br/>
+        </p>
+        <p>
+          I'm driven by curiousity, and as such it's importent fo me <br/>
            to create things that are engaging, readable and self-explanatory.
         </p>
         <div class="about-left-links">
@@ -51,7 +53,7 @@
             even just for the sake of solving interesting problems. <br/>
    
             I think that a mix of loosenss and firmness in any <br/>
-            process are key to find creative yet smart solutions. <br/>
+            process is key to find creative yet smart solutions. <br/>
    
             I'm driven by curiousity, and as such it's importent fo me <br/>
             to create things that are engaging, readable and self-explanatory.
@@ -129,7 +131,8 @@
     margin-bottom: 30px;
   }
 
-  .about-left-text > p:last-of-type{
+  .about-left-text > p:nth-of-type(3),
+  .about-left-text > p:last-of-type {
     margin-top: 12px;
   }
 
