@@ -13,11 +13,11 @@ const toggleMenu = () => {
       menu = null
     }
   }
-  
+
 </script>
 
 <nav>
-  <div class="container f-jsb">
+  <div class="container f-jsb delay-1200 hidden">
     <div class="logo border">
       <a href="/">ya-johnson</a>
     </div>
@@ -170,9 +170,10 @@ const toggleMenu = () => {
   }
 
   .projects > p {
-    font-size: 4rem;
+    font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 40px;
   }
 
   .projects > a {

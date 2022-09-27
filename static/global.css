@@ -104,3 +104,29 @@ a {
 .purple-btn {
   background-color: var(--purple);
 }
+
+
+/* scroll animation */
+
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(10%);
+  transition: all ease-out .4s;
+}
+
+.reveal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all ease-out .4s;
+}
+
+.delay-200 {
+  transition-delay: .2s;
+}
+
+.delay-1200 {
+  transition-delay: 1.2s;
+}
+
