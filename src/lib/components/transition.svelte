@@ -10,7 +10,7 @@
 
     setTimeout(() => {
       transition = 'hidden'
-    }, 1650)
+    }, 1200)
   }
 
   reveal()
@@ -20,7 +20,6 @@
 
 
 <div class="transition {transitionClose} {transition}">
-  <p>ya-johnson</p>
   <div class="col col1"></div>
   <div class="col col2"></div>
   <div class="col col3"></div>
@@ -31,6 +30,8 @@
   <div class="col col8"></div>
   <div class="col col9"></div>
   <div class="col col10"></div>
+  <div class="col col11"></div>
+  <div class="col col12"></div>
 </div>
 
 <style>
@@ -45,30 +46,16 @@
     z-index: 40;
   }
 
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: var(--bg);
-    font-size: 80px;
-    font-weight: 700;
-    transform: translate(-50%, -50%);
-  }
-
   .col {
     height: 100vh;
     width: calc(100%/10);
     background-color: var(--black);
-    transform-origin: left;
-    transition: all ease-out .4s;
-  }
-
-  .transition-close > p {
-    opacity: 0;
+    transform-origin: 100% 50%;
+    transition: all ease-out .35s;
   }
 
   .transition-close > .col {
-    transform: translateY(100vh);
+    transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1) rotate(0);
   }
 
   .hidden {
@@ -76,43 +63,51 @@
   }
 
   .col1 {
-    transition-delay: 0.1s;
+    transition-delay: .05s;
   }
 
   .col2 {
-    transition-delay: 0.2s;
+    transition-delay: .1s;
   }
 
   .col3 {
-    transition-delay: 0.3s;
+    transition-delay: .15s;
   }
 
   .col4 {
-    transition-delay: 0.4s;
+    transition-delay: .2s;
   }
 
   .col5 {
-    transition-delay: 0.5s;
+    transition-delay: .25s;
   }
 
   .col6 {
-    transition-delay: 0.6s;
+    transition-delay: .3s;
   }
 
   .col7 {
-    transition-delay: 0.7s;
+    transition-delay: .35s;
   }
 
   .col8 {
-    transition-delay: 0.8s;
+    transition-delay: .4s;
   }
 
   .col9 {
-    transition-delay: 0.9s;
+    transition-delay: .45s;
   }
 
   .col10 {
-    transition-delay: 1s;
+    transition-delay: .5s;
+  }
+
+  .col11 {
+    transition-delay: .55s;
+  }
+
+  .col12 {
+    transition-delay: .6s;
   }
 
 </style>
