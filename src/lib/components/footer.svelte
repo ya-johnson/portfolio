@@ -1,9 +1,17 @@
+<script>
+  const copyEmail = () => {
+    navigator.clipboard.writeText('yonathan@yajohnson.xyz')
+  }
+</script>
+
 <footer id="contact">
   <div class="container">
+
     <div class="footer-main">
       <p>Contact Me</p>
+
       <div class="links">
-        <div class="link">
+        <div class="link" on:click={copyEmail}>
           <div class="email">yonathan@yajohnson.xyz
             <div class="copy">
               <div></div>
@@ -12,17 +20,10 @@
           </div>
         </div>
       </div>
+
     </div>
-    
 
-      <!-- <div class="links"> -->
-        
-        <!-- <div class="link">
-          <div class="github">github</div>
-        </div> -->
-      <!-- </div> -->
-
-      <p class="rights">@ya-johnson 2022</p>
+    <p class="rights">@ya-johnson 2022</p>
   </div>
 </footer>
 
