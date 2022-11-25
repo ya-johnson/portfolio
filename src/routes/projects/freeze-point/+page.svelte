@@ -1,22 +1,14 @@
 <script>
-  import { onMount } from 'svelte'
-  import * as reveal from '$lib/functions/reveal'
-  import Transition from '$lib/components/transition.svelte'
-  import Nav from '$lib/components/nav.svelte'
+  
   import Bar from '$lib/components/bar.svelte'
-  import Footer from '$lib/components/footer.svelte'
 
-  onMount(() => {
-    reveal.once()
-  })
 </script>
 
-<Transition />
-<Nav />
 <main>
-  <section class="project-hero">
+
+  <section class="case-hero">
     <div class="container f-jsb">
-      <div class="project-hero-left hidden">
+      <div class="case-hero-left hidden">
         <h1 class="delay-1200 hidden">Freeze Point</h1>
         <p class="delay-1400 hidden">
             Freeze Point is a Social Blogging App, with the intention
@@ -76,7 +68,7 @@
   <Bar type='design' />
   <section>
     <div class="container">
-      <div class="case-design">
+      <div class="case-text">
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -138,7 +130,7 @@
 
   <section>
     <div class="container">
-      <div class="case-dev">
+      <div class="case-text">
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -202,7 +194,5 @@
       </div>
     </div>
   </section>
-
-  <Footer />
 
 </main>

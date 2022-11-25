@@ -1,25 +1,14 @@
 <script>
-  import { onMount } from 'svelte'
-  import * as reveal from '$lib/functions/reveal'
-  import Transition from '$lib/components/transition.svelte'
-  import Nav from '$lib/components/nav.svelte'
+  
   import Bar from '$lib/components/bar.svelte'
-  import Footer from '$lib/components/footer.svelte'
   import F1boxHome from '$lib/assests/Screenshot 2022-09-30 at 21-20-44 F1 box.png'
 
-
-  onMount(() => {
-    reveal.once()
-  })
 </script>
 
-<Transition />
-<Nav />
-
 <main>
-  <section class="project-hero">
+  <section class="case-hero">
     <div class="container f-jsb">
-      <div class="project-hero-left">
+      <div class="case-hero-left">
         <h1 class="delay-1200 hidden">F1 box</h1>
         <p class="delay-1400 hidden">
           As a Formula 1 fan i grow to understand the importance of the sports data,
@@ -48,6 +37,7 @@
       <div class="case-demo-left">
         <h3>App Demo</h3>
         <ul>
+          Pages
           <li>Home</li>
           <li>Race</li>
           <li>Standings</li>
@@ -55,6 +45,9 @@
           <li>Constructors</li>
           <li>Compare</li>
           <li>Race Simulator</li>
+        </ul>
+        <ul>
+          Features
           <li>Theme toggle</li>
         </ul>
       </div>
@@ -67,7 +60,37 @@
   <Bar type='design' />
   <section>
     <div class="container">
-      <div class="case-design">
+      <div class="case-text">
+        <h3>Introduction</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Auctor augue mauris augue neque gravida in fermentum et.
+          Quam vulputate dignissim suspendisse in est ante. Magna ac placerat
+          vestibulum lectus mauris ultrices eros in cursus. Enim nec dui nunc
+          mattis enim ut tellus elementum. Leo in vitae turpis massa sed elementum
+          tempus egestas. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+          Risus quis varius quam quisque id. Commodo nulla facilisi nullam vehicula
+          ipsum a arcu. Dictum non consectetur a erat nam. Donec enim diam vulputate
+          ut pharetra sit. Cras adipiscing enim eu turpis. At risus viverra adipiscing at.
+          At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
+          Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
+        </p>
+        <h3>Introduction</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Auctor augue mauris augue neque gravida in fermentum et.
+          Quam vulputate dignissim suspendisse in est ante. Magna ac placerat
+          vestibulum lectus mauris ultrices eros in cursus. Enim nec dui nunc
+          mattis enim ut tellus elementum. Leo in vitae turpis massa sed elementum
+          tempus egestas. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+          Risus quis varius quam quisque id. Commodo nulla facilisi nullam vehicula
+          ipsum a arcu. Dictum non consectetur a erat nam. Donec enim diam vulputate
+          ut pharetra sit. Cras adipiscing enim eu turpis. At risus viverra adipiscing at.
+          At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
+          Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
+        </p>
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -90,7 +113,52 @@
 
   <section>
     <div class="container">
-      <div class="case-dev">
+      <div class="case-text">
+        <h3>Introduction</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Auctor augue mauris augue neque gravida in fermentum et.
+          Quam vulputate dignissim suspendisse in est ante. Magna ac placerat
+          vestibulum lectus mauris ultrices eros in cursus. Enim nec dui nunc
+          mattis enim ut tellus elementum. Leo in vitae turpis massa sed elementum
+          tempus egestas. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+          Risus quis varius quam quisque id. Commodo nulla facilisi nullam vehicula
+          ipsum a arcu. Dictum non consectetur a erat nam. Donec enim diam vulputate
+          ut pharetra sit. Cras adipiscing enim eu turpis. At risus viverra adipiscing at.
+          At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
+          Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
+        </p>
+        <h3>Introduction</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Auctor augue mauris augue neque gravida in fermentum et.
+          Quam vulputate dignissim suspendisse in est ante. Magna ac placerat
+          vestibulum lectus mauris ultrices eros in cursus. Enim nec dui nunc
+          mattis enim ut tellus elementum. Leo in vitae turpis massa sed elementum
+          tempus egestas. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+          Risus quis varius quam quisque id. Commodo nulla facilisi nullam vehicula
+          ipsum a arcu. Dictum non consectetur a erat nam. Donec enim diam vulputate
+          ut pharetra sit. Cras adipiscing enim eu turpis. At risus viverra adipiscing at.
+          At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
+          Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
+        </p>
+        <h3>Introduction</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Auctor augue mauris augue neque gravida in fermentum et.
+          Quam vulputate dignissim suspendisse in est ante. Magna ac placerat
+          vestibulum lectus mauris ultrices eros in cursus. Enim nec dui nunc
+          mattis enim ut tellus elementum. Leo in vitae turpis massa sed elementum
+          tempus egestas. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+          Risus quis varius quam quisque id. Commodo nulla facilisi nullam vehicula
+          ipsum a arcu. Dictum non consectetur a erat nam. Donec enim diam vulputate
+          ut pharetra sit. Cras adipiscing enim eu turpis. At risus viverra adipiscing at.
+          At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
+          Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
+        </p>
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -109,8 +177,6 @@
       </div>
     </div>
   </section>
-
-  <Footer />
 
 </main>
 
