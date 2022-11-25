@@ -1,23 +1,43 @@
 <script>
+  import { isMenu } from '../stores'
 
+  export let path
   let transition
   let transitionClose
+  let isNavMenu
+  
+  $: if (path) reveal()
+  isMenu.subscribe(state => isNavMenu = state)
+
 
   const reveal = () => {
     setTimeout(() => {
-      transitionClose = 'transition-close'
-    }, 250)
+      if (isNavMenu === 'open') {
+        setTimeout(() => {
+          isMenu.update(state => state = '')
+          transitionClose = null
+          transition = null
+          reveal()
+        }, 900)
+      }
+      else if (!transition && !transitionClose) {
+        setTimeout(() => {
+          transitionClose = 'transition-close'
+        }, 250)
 
-    setTimeout(() => {
-      transition = 'hidden'
-    }, 1200)
+        setTimeout(() => {
+          transition = 'hidden'
+        }, 1100)
+      } 
+      else {
+        transitionClose = null
+        transition = null
+        reveal()
+      }
+    }, 50)
   }
 
-  reveal()
-
 </script>
-
-
 
 <div class="transition {transitionClose} {transition}">
   <div class="col col1"></div>
@@ -46,12 +66,14 @@
     z-index: 40;
   }
 
+  .transition-on-menu {
+    background-color: var(--black);
+    z-index: 10;
+  }
+
   .col {
-    height: 100vh;
-    width: calc(100%/10);
     background-color: var(--black);
     transform-origin: 100% 50%;
-    transition: all ease-out .35s;
   }
 
   .transition-close > .col {
@@ -60,54 +82,6 @@
 
   .hidden {
     display: none;
-  }
-
-  .col1 {
-    transition-delay: .05s;
-  }
-
-  .col2 {
-    transition-delay: .1s;
-  }
-
-  .col3 {
-    transition-delay: .15s;
-  }
-
-  .col4 {
-    transition-delay: .2s;
-  }
-
-  .col5 {
-    transition-delay: .25s;
-  }
-
-  .col6 {
-    transition-delay: .3s;
-  }
-
-  .col7 {
-    transition-delay: .35s;
-  }
-
-  .col8 {
-    transition-delay: .4s;
-  }
-
-  .col9 {
-    transition-delay: .45s;
-  }
-
-  .col10 {
-    transition-delay: .5s;
-  }
-
-  .col11 {
-    transition-delay: .55s;
-  }
-
-  .col12 {
-    transition-delay: .6s;
   }
 
 </style>

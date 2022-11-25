@@ -1,9 +1,16 @@
 <script>
+  import { isMenu } from '../stores'
 
-let menuBtn
-let menu
+  export let path
+  let menuBtn
+  let menu
+  let isNavMenu
 
-const toggleMenu = () => {
+  $: if (path) afterNavigate()
+  isMenu.subscribe(state => isNavMenu = state)
+
+
+  const toggleMenu = () => {
     if (menuBtn == null && menu == null) {
       menuBtn = 'menu-btn-open'
       menu = 'menu-open'
@@ -14,12 +21,20 @@ const toggleMenu = () => {
     }
   }
 
+  const afterNavigate = () => {
+    if (isNavMenu === '' && menuBtn && menu) {
+      isMenu.update(state => state = 'open')
+      menuBtn = null
+      menu = null
+    }
+  }
+
 </script>
 
 <nav>
   <div class="container f-jsb delay-1200 hidden">
-    <div class="logo border">
-      <a href="/">ya-johnson</a>
+    <div>
+      <a class="logo border"href="/">ya-johnson</a>
     </div>
 
     <div class="menu-btn border {menuBtn}" on:click={toggleMenu}>
@@ -30,7 +45,25 @@ const toggleMenu = () => {
   </div>
 </nav>
 
-<div class="menu border {menu}">
+{#if isNavMenu === 'open'}
+  <div class="background"></div>
+{/if}
+
+<div class="menu {menu}">
+  <div class="shutter">
+    <div class="col col12"></div>
+    <div class="col col11"></div>
+    <div class="col col10"></div>
+    <div class="col col9"></div>
+    <div class="col col8"></div>
+    <div class="col col7"></div>
+    <div class="col col6"></div>
+    <div class="col col5"></div>
+    <div class="col col4"></div>
+    <div class="col col3"></div>
+    <div class="col col2"></div>
+    <div class="col col1"></div>
+  </div>
   <div class="container f-jsb">
     <div class="projects f-col">
       <p>Projects</p>
@@ -70,9 +103,10 @@ const toggleMenu = () => {
 
   .logo {
     left: 20px;
-    font-size: 20px;
-    font-weight: 500;
     padding: 8px 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
     border-radius: 12px;
   }
 
@@ -84,8 +118,8 @@ const toggleMenu = () => {
     border-radius: 50%;
   }
 
-  .logo::before,
-  .menu-btn::before {
+  .logo::after,
+  .menu-btn::after {
     content: "";
     position: absolute;
     top: 2px;
@@ -98,11 +132,11 @@ const toggleMenu = () => {
     z-index: -1;
   }
 
-  .logo::before {
+  .logo::after {
     border-radius: 12px;
   }
 
-  .menu-btn::before {
+  .menu-btn::after {
     border-radius: 50%;
   }
 
@@ -116,8 +150,8 @@ const toggleMenu = () => {
     right: 20px;
   }
 
-  .logo:hover::before,
-  .menu-btn:hover::before {
+  .logo:hover::after,
+  .menu-btn:hover::after {
     top: 0px;
     left: 0px;
   }
@@ -153,20 +187,66 @@ const toggleMenu = () => {
     transform: rotate(-45deg);
   }
 
-  .menu {
-    visibility: hidden;
+  .background {
     position: fixed;
-    top: 100%;
+    top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--yellow);
-    transition: all ease-out .15s;
+    background-color: var(--black);
+    z-index: 5;
+  }
+
+  .menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all ease-out .35s;
     z-index: 10;
+  }
+
+  .menu-open {
+    visibility: visible;
+  }
+
+  .shutter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+  }
+
+  .col {
+    background-color: var(--yellow);
+    transform-origin: 100% 50%;
+    transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1) rotate(0);
+  }
+
+  .menu-open > .shutter > .col {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate(0);
   }
 
   .menu > .container {
     height: 100%;
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(60px);
+    transition-duration: .35s;
+    transition-delay: 1.2s;
+    transition-property: all;
+    transition-timing-function: ease-out;
+  }
+
+  .menu-open > .container {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    transition-delay: 0;
   }
 
   .projects > p {
@@ -185,9 +265,32 @@ const toggleMenu = () => {
     font-size: 1.2rem;
   }
 
-  .menu-open {
-    visibility: visible;
-    top: 0;
+  @media screen and (max-width: 991px) {
+
+    .logo {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .logo {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 12px;
+    }
+
+    .menu-btn {
+      height: 42px;
+      width: 42px;
+    }
+
+    .bar-1,
+    .bar-2 {
+      width: 14px;
+    }
+
   }
 
 </style>

@@ -6,7 +6,10 @@
   --bg: #EDF6F9;
   --purple: #99A9F4;
   --pink: #EA9AB2;
+  --pink-darker: #E17092;
   --yellow: #F5D491;
+  --yellow-dim: #FCF2DF;
+  --blue: #c1d3fe;
   --black: #292A2B;
 }
 
@@ -16,16 +19,43 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: var(--black);
   background-color: var(--bg);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+}
+
+h1,
+h2 {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 34px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -33,9 +63,14 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 12px;
+}
+
 /* utility */
 
 .container {
+  width: 100%;
   max-width: 1400px;
   padding: 0 20px;
   margin: 0 auto;
@@ -89,20 +124,81 @@ a {
   left: 4px;
 }
 
-.white-btn {
+.bg-white {
   background-color: var(--white);
 }
 
-.pink-btn {
+.bg-pink {
   background-color: var(--pink);
 }
 
-.yellow-btn {
+.bg-yellow {
   background-color: var(--yellow);
 }
 
-.purple-btn {
+.bg-purple {
   background-color: var(--purple);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+
+/* shutters */
+
+.col {
+  height: 100vh;
+  width: calc(100%/12);
+  transition: all ease-out .35s;
+}
+
+.col1 {
+  transition-delay: .05s;
+}
+
+.col2 {
+  transition-delay: .1s;
+}
+
+.col3 {
+  transition-delay: .15s;
+}
+
+.col4 {
+  transition-delay: .2s;
+}
+
+.col5 {
+  transition-delay: .25s;
+}
+
+.col6 {
+  transition-delay: .3s;
+}
+
+.col7 {
+  transition-delay: .35s;
+}
+
+.col8 {
+  transition-delay: .4s;
+}
+
+.col9 {
+  transition-delay: .45s;
+}
+
+.col10 {
+  transition-delay: .5s;
+}
+
+.col11 {
+  transition-delay: .55s;
+}
+
+.col12 {
+  transition-delay: .6s;
 }
 
 
@@ -111,7 +207,7 @@ a {
 .hidden {
   opacity: 0;
   filter: blur(2px);
-  transform: translateY(10%);
+  transform: translateY(60px);
   transition: all ease-out .4s;
 }
 
@@ -126,7 +222,175 @@ a {
   transition-delay: .2s;
 }
 
+.delay-400 {
+  transition-delay: .4s;
+}
+
+.delay-600 {
+  transition-delay: .6s;
+}
+
+.delay-800 {
+  transition-delay: .8s;
+}
+
 .delay-1200 {
   transition-delay: 1.2s;
 }
 
+.delay-1400 {
+  transition-delay: 1.4s;
+}
+
+.delay-1600 {
+  transition-delay: 1.6s;
+}
+
+
+/* project links */
+
+.project-links {
+  position: relative;
+  margin-top: 40px;
+}
+
+.project-links > .bg-yellow {
+  left: 100px;
+}
+
+.project-links > .bg-yellow:hover {
+  left: 102px;
+}
+
+.project-links > .bg-purple {
+  left: 228px;
+}
+
+.project-links > .bg-purple:hover {
+  left: 230px;
+}
+
+
+/* case */
+
+.case-hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--black);
+  background-color: var(--purple);
+}
+
+.case-hero-left {
+  width: 50%;
+}
+
+.case-demo {
+  display: flex;
+  height: 80vh;
+  padding: 120px 0;
+}
+
+.case-demo-left {
+  min-height: 80%;
+}
+
+.case-demo-left > ul {
+  margin-left: 20px;
+}
+
+.case-demo-left > ul > ul {
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.case-demo-left li {
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.case-demo-left li:hover {
+  text-decoration: underline;
+}
+
+.case-demo-right {
+  width: 70%;
+}
+
+.case-demo-right > img {
+  width: 100%;
+}
+
+.case-design {
+  margin: 120px 0;
+}
+
+.case-text {
+  max-width: 740px;
+  margin: 120px auto;
+}
+
+.case-text > p {
+  margin-bottom: 60px;
+}
+
+
+@media screen and (max-width: 991px) {
+
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .project-hero {
+    padding: 200px 0;
+  }
+
+  .project-hero > .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-links {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  body {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
