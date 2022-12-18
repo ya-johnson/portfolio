@@ -4,12 +4,16 @@
 :root {
   --white: #ffffff;
   --bg: #EDF6F9;
+  --bg-dim: #ffffff77;
   --purple: #99A9F4;
+  --purple-dim: #99A9F444;
   --pink: #EA9AB2;
   --pink-darker: #E17092;
+  --pink-dim: #E1709255;
   --yellow: #F5D491;
-  --yellow-dim: #FCF2DF;
+  --yellow-dim: #F5D49144;
   --blue: #c1d3fe;
+  --blue-dim: #c1d3fe77;
   --black: #292A2B;
 }
 
@@ -74,6 +78,10 @@ p {
   max-width: 1400px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
 }
 
 .f-jsb {
@@ -371,6 +379,22 @@ p {
 
   .project-links {
     margin-top: 20px;
+  }
+
+  .project-links > .bg-yellow {
+    left: 88px;
+  }
+  
+  .project-links > .bg-yellow:hover {
+    left: 90px;
+  }
+  
+  .project-links > .bg-purple {
+    left: 200px;
+  }
+  
+  .project-links > .bg-purple:hover {
+    left: 202px;
   }
 }
 
