@@ -15,13 +15,13 @@ const initObserver = (type) => {
 
 const multiple = () => {
   const observer = initObserver('multiple')
-  const hiddenElements = document.querySelectorAll('.hidden')
+  const hiddenElements = document.querySelectorAll('.hide')
   hiddenElements.forEach(el => observer.observe(el))
 }
 
 const once = () => {
   const observer = initObserver()
-  const hiddenElements = document.querySelectorAll('.hidden')
+  const hiddenElements = document.querySelectorAll('.hide')
   hiddenElements.forEach(el => observer.observe(el))
 }
 
