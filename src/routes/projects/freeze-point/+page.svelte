@@ -1,16 +1,14 @@
 <script>
-  
   import Bar from '$lib/components/bar.svelte'
-
 </script>
 
 <main>
 
   <section class="case-hero">
     <div class="container f-jsb">
-      <div class="case-hero-left hidden">
-        <h1 class="delay-1200 hidden">Freeze Point</h1>
-        <p class="delay-1400 hidden">
+      <div class="case-hero-left hide">
+        <h1 class="delay-1200 hide">Freeze Point</h1>
+        <p class="delay-1400 hide">
             Freeze Point is a Social Blogging App, with the intention
             of providing platform of knowledge sharing for
             Writers and Readers who apprciate the written word.
@@ -18,12 +16,18 @@
             Authenticated Users can also Write, Edit, Delete, their
             own posts, and Like & Comment on other Users posts,
             as well as Follow other Users or popular Topics.
-         </p>
-          <p class="delay-1400 hidden">
-              Build with: Node-Js, Express, MongoDB, Cloudinary,
-              React, Zustand, Tailwind.
-          </p>
-        <div class="project-links delay-1600 hidden">
+        </p>
+        <div class="proj-stack delay-1400 hide">
+          <p class="proj-stack-btn">Node-Js</p>
+          <p class="proj-stack-btn">Express</p>
+          <p class="proj-stack-btn">MongoDB</p>
+          <p class="proj-stack-btn">JWT</p>
+          <p class="proj-stack-btn">Cloudinary</p>
+          <p class="proj-stack-btn">React</p>
+          <p class="proj-stack-btn">Zustand</p>
+          <p class="proj-stack-btn">Tailwind</p>
+        </div>
+        <div class="proj-links delay-1600 hide">
           <a href="/" class="btn bg-white">Live</a>
           <a href="/" class="btn bg-yellow">Source</a>
         </div>

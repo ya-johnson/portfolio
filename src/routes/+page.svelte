@@ -1,5 +1,4 @@
 <script>
-
   import { onMount } from 'svelte'
   import Bar from '$lib/components/bar.svelte'
   import Title from '$lib/svg/title.svelte'
@@ -20,36 +19,35 @@
   </section>
 
   <section class="about container f-jsb">
-    <div class="about-left hidden">
+    <div class="about-left hide">
       <Polygon />
       <div class="about-left-text">
         <p>Hi, i'm Yonathan,</p>
         <h2>I Build things for the Web.</h2>
         <p>
-           As Tech enthusiast i'm advocate for Open Source,
-           and my work approach motivated by it's principles.
+          As Tech enthusiast i'm advocate for Open Source,
+          and my work approach motivated by it's principles.
         </p>
         <p>
-           I have an intrest in making things and making them good,
-           even just for the sake of solving interesting problems.
-           I think that a mix of loosenss and firmness in any
-           process is key to find creative yet smart solutions.
+          I have an intrest in making things and making them good,
+          even just for the sake of solving interesting problems.
+          I think that a mix of loosenss and firmness in any
+          process is key to find creative yet smart solutions.
         </p>
         <p>
           I'm driven by curiousity, and as such it's importent fo me
-           to create things that are engaging, readable and self-explanatory.
+          to create things that are engaging, readable and self-explanatory.
         </p>
-        <div class="about-left-links delay-400 hidden">
+        <div class="about-left-links delay-400 hide">
           <a href="/#contact" class="btn bg-pink">Let's Talk</a>
-          <a href="https://github.com/ya-johnson/web-dev-resources" 
-             class="btn bg-white" target="__blank">Resources</a>
+          <a href="https://github.com/ya-johnson/web-dev-resources" class="btn bg-white" target="__blank">Resources</a>
         </div>
       </div>
     </div>
 
-    <div class="about-right delay-400 hidden">
+    <div class="about-right delay-400 hide">
       <Peep />
-      <div class="chickies-box">
+      <div class="chickies-box delay-1200 hide">
         <Chickies />
       </div>
     </div>
@@ -58,37 +56,44 @@
   <Bar type='idea' />
 
   <section class="projects container">
-    <h2 class="hidden">PROJECTS</h2>
+    <h2 class="hide">PROJECTS</h2>
 
-    <div class="project p-f1">
-      <div class="project-left">
-        <h3 class="hidden">F1 box</h3>
-        <p class="delay-200 hidden">
+    <div class="proj">
+      <div class="proj-left">
+        <h3 class="hide">F1 box</h3>
+        <p class="delay-200 hide">
           F1 box is a hub and a platform for analysing Formula 1 data.
           It goes back from the first F1 race in 1950 up to the most
           current one. Features an in depth Race, Drivers, Constructors
           analytics and information, as well as News and Press gathered
           from popular publishers.
-       </p>
-       <p class="delay-200 hidden">
-          Build with: Next-Js, Zustand, SWR, Cheerio, Tailwind. <br/>
-          Powered by <a href="https://ergast.com/mrd/" target="_blank">Ergrast F1 API.</a>
-       </p>
-        <div class="project-links delay-400 hidden">
+        </p>
+        <div class="proj-stack delay-200 hide">
+          <p class="proj-stack-btn">Next-Js</p>
+          <p class="proj-stack-btn">Zustand</p>
+          <p class="proj-stack-btn">SWR</p>
+          <p class="proj-stack-btn">Cheerio</p>
+          <p class="proj-stack-btn">Tailwind</p>
+        </div>
+        <p class="delay-200 hide">
+            Powered by 
+            <a href="https://ergast.com/mrd/" class="underline" target="_blank" rel="noreferrer">Ergrast F1 API.</a>
+        </p>
+        <div class="proj-links delay-400 hide">
           <a href="/" class="btn bg-white">Live</a>
-          <a href="https://github.com/ya-johnson/f1-box" target="_blank" class="btn bg-yellow">Source</a>
+          <a href="https://github.com/ya-johnson/f1-box" target="_blank" class="btn bg-yellow" rel="noreferrer">Source</a>
           <a href="/projects/f1-box" class="btn bg-purple">Case Study</a>
         </div>
       </div>
-      <div class="project-right delay-400 hidden">
+      <div class="proj-right delay-400 hide">
         <img src={F1boxHome} alt="">
       </div>
     </div>
 
-    <div class="project">
-      <div class="project-left">
-        <h3 class="hidden">Freeze Point</h3>
-        <p class="delay-200 hidden">
+    <div class="proj">
+      <div class="proj-left">
+        <h3 class="hide">Freeze Point</h3>
+        <p class="delay-200 hide">
           Freeze Point is a Social Blogging App, with the intention
           of providing platform of knowledge sharing for
           Writers and Readers who apprciate the written word.
@@ -96,18 +101,24 @@
           Authenticated Users can also Write, Edit, Delete, their
           own posts, and Like & Comment on other Users posts,
           as well as Follow other Users or popular Topics.
-       </p>
-       <p class="delay-200 hidden">
-          Build with: Node-Js, Express, MongoDB, JWT, Cloudinary,
-          React, Zustand, Tailwind.
-       </p>
-        <div class="project-links delay-400 hidden">
+        </p>
+        <div class="proj-stack delay-200 hide">
+          <p class="proj-stack-btn">Node-Js</p>
+          <p class="proj-stack-btn">Express</p>
+          <p class="proj-stack-btn">MongoDB</p>
+          <p class="proj-stack-btn">JWT</p>
+          <p class="proj-stack-btn">Cloudinary</p>
+          <p class="proj-stack-btn">React</p>
+          <p class="proj-stack-btn">Zustand</p>
+          <p class="proj-stack-btn">Tailwind</p>
+        </div>
+        <div class="proj-links delay-400 hide">
           <a href="/" class="btn bg-white">Live</a>
           <a href="https://github.com/ya-johnson/freeze-point" target="__blank" class="btn bg-yellow">Source</a>
           <a href="/projects/freeze-point" class="btn bg-purple">Case Study</a>
         </div>
       </div>
-      <div class="project-right delay-400 hidden">
+      <div class="proj-right delay-400 hide">
         <img src={F1boxHome} alt="">
       </div>
     </div>
@@ -183,23 +194,12 @@
   }
 
   .chickies-box {
-    visibility: hidden;
-    opacity: 0.5;
     position: absolute;
-    top: -100px;
-    right: -400px;
-    width: 400px;
+    top: -20px;
+    right: -100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all ease-out .25s;
-  }
-
-  .about-right:hover > .chickies-box {
-    visibility: visible;
-    opacity: 1;
-    top: -20px;
-    right: -200px;
   }
 
   .projects,
@@ -207,37 +207,33 @@
     padding: 160px 20px;
   }
 
-  .project {
+  .proj {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 60px 0;
   }
 
-  .project:first-of-type {
+  .proj:not(last-of-type) {
     margin-bottom: 100px;
   }
 
-  .project-left {
+  .proj-left {
     width: 45%;
   }
   
-  .project-right {
+  .proj-right {
     width: 50%;
   }
 
-  .project-right > img {
+  .proj-right > img {
     width: 100%;
-  }
-
-  .p-f1 > .project-left > p > a {
-    text-decoration: underline;
-  }
+  }  
 
   @media screen and (max-width: 991px) {
 
     .about,
-    .project {
+    .proj {
       flex-direction: column;
       height: auto;
     }
@@ -250,8 +246,8 @@
 
     .about-left,
     .about-left-text,
-    .project-left,
-    .project-right {
+    .proj-left,
+    .proj-right {
       width: 100%;
     }
 
@@ -281,19 +277,23 @@
     }
 
     .about-right {
-      width: 80%;
+      width: 100%;
       padding: 40px 0;
     }
 
-    .project {
+    .chickies-box {
+      display: none;
+    }
+
+    .proj {
       padding: 40px 0;
     }
 
-    .project-left > p {
+    .proj-left > p {
       width: 70%;
     }
 
-    .project-right {
+    .proj-right {
       margin-top: 80px;
     }
   }
@@ -310,7 +310,7 @@
       width: 75%;
     }
 
-    .project-left > p {
+    .proj-left > p {
       width: 100%;
     }
   }
