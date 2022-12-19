@@ -71,6 +71,7 @@ p {
   margin-bottom: 12px;
 }
 
+
 /* utility */
 
 .container {
@@ -78,10 +79,6 @@ p {
   max-width: 1400px;
   padding: 0 20px;
   margin: 0 auto;
-}
-
-.flex {
-  display: flex;
 }
 
 .f-jsb {
@@ -97,6 +94,10 @@ p {
 
 .border {
   border: solid 2px var(--black);
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .btn {
@@ -212,7 +213,7 @@ p {
 
 /* scroll animation */
 
-.hidden {
+.hide {
   opacity: 0;
   filter: blur(2px);
   transform: translateY(60px);
@@ -255,26 +256,49 @@ p {
 }
 
 
-/* project links */
+/* project stack */
 
-.project-links {
-  position: relative;
-  margin-top: 40px;
+.proj-stack {
+  max-width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.project-links > .bg-yellow {
+.proj-stack-btn {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 2px 4px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  background-color: var(--bg-dim);
+}
+
+.proj-stack-btn:not(last-child) {
+  margin-right: 10px;
+}
+
+
+/* project links */
+
+.proj-links {
+  position: relative;
+  margin-top: 20px;
+}
+
+.proj-links > .bg-yellow {
   left: 100px;
 }
 
-.project-links > .bg-yellow:hover {
+.proj-links > .bg-yellow:hover {
   left: 102px;
 }
 
-.project-links > .bg-purple {
+.proj-links > .bg-purple {
   left: 228px;
 }
 
-.project-links > .bg-purple:hover {
+.proj-links > .bg-purple:hover {
   left: 230px;
 }
 
@@ -367,33 +391,23 @@ p {
     font-size: 28px;
   }
 
-  .project-hero {
-    padding: 200px 0;
-  }
-
-  .project-hero > .container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project-links {
+  .proj-links {
     margin-top: 20px;
   }
 
-  .project-links > .bg-yellow {
+  .proj-links > .bg-yellow {
     left: 88px;
   }
   
-  .project-links > .bg-yellow:hover {
+  .proj-links > .bg-yellow:hover {
     left: 90px;
   }
   
-  .project-links > .bg-purple {
+  .proj-links > .bg-purple {
     left: 200px;
   }
   
-  .project-links > .bg-purple:hover {
+  .proj-links > .bg-purple:hover {
     left: 202px;
   }
 }
@@ -404,7 +418,6 @@ p {
     font-size: 14px;
     line-height: 18px;
   }
-
 
   h1 {
     font-size: 28px;
