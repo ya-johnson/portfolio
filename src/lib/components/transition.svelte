@@ -1,5 +1,5 @@
 <script>
-  import { isMenu } from '../stores'
+  import { isMenu } from '../../stores'
 
   export let path
   let transition
@@ -12,9 +12,9 @@
 
   const reveal = () => {
     setTimeout(() => {
-      if (isNavMenu === 'open') {
+      if (isNavMenu) {
         setTimeout(() => {
-          isMenu.update(state => state = '')
+          isMenu.update(state => state = false)
           transitionClose = null
           transition = null
           reveal()
@@ -66,14 +66,9 @@
     z-index: 40;
   }
 
-  .transition-on-menu {
-    background-color: var(--black);
-    z-index: 10;
-  }
-
   .col {
-    background-color: var(--black);
     transform-origin: 100% 50%;
+    background-color: var(--black);
   }
 
   .transition-close > .col {

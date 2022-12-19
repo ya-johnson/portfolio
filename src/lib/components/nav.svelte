@@ -1,43 +1,31 @@
 <script>
-  import { isMenu } from '../stores'
+  import { isMenu } from '../../stores'
 
   export let path
-  let menuBtn
   let menu
   let isNavMenu
 
   $: if (path) afterNavigate()
   isMenu.subscribe(state => isNavMenu = state)
 
-
-  const toggleMenu = () => {
-    if (menuBtn == null && menu == null) {
-      menuBtn = 'menu-btn-open'
-      menu = 'menu-open'
-    } 
-    else {
-      menuBtn = null
-      menu = null
-    }
-  }
+  const toggleMenu = () => !menu ? menu = true : menu = false
 
   const afterNavigate = () => {
-    if (isNavMenu === '' && menuBtn && menu) {
-      isMenu.update(state => state = 'open')
-      menuBtn = null
-      menu = null
+    if (!isNavMenu && menu) {
+      isMenu.update(state => state = true)
+      menu = false
     }
   }
 
 </script>
 
 <nav>
-  <div class="container f-jsb delay-1200 hidden">
+  <div class="container f-jsb delay-1200 hide">
     <div>
       <a class="logo border"href="/">ya-johnson</a>
     </div>
 
-    <div class="menu-btn border {menuBtn}" on:click={toggleMenu}>
+    <div class="menu-btn border {menu && 'menu-btn-open'}" on:click={toggleMenu} on:keypress={toggleMenu}>
       <div class="bar-1"></div>
       <div class="bar-2"></div>
     </div>
@@ -45,11 +33,11 @@
   </div>
 </nav>
 
-{#if isNavMenu === 'open'}
+{#if isNavMenu}
   <div class="background"></div>
 {/if}
 
-<div class="menu {menu}">
+<div class="menu {menu && 'menu-open'}">
   <div class="shutter">
     <div class="col col12"></div>
     <div class="col col11"></div>
