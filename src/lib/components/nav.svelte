@@ -20,7 +20,7 @@
 </script>
 
 <nav>
-  <div class="container f-jsb delay-1200 hide">
+  <div class="container f-jsb delay-1400 hide">
     <div>
       <a class="logo border"href="/">ya-johnson</a>
     </div>
@@ -219,13 +219,109 @@
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate(0);
   }
 
+  .col1 {
+    transition-delay: .4s;
+  }
+
+  .col2 {
+    transition-delay: .45s;
+  }
+
+  .col3 {
+    transition-delay: .5s;
+  }
+
+  .col4 {
+    transition-delay: .55s;
+  }
+
+  .col5 {
+    transition-delay: .6s;
+  }
+
+  .col6 {
+    transition-delay: .65s;
+  }
+
+  .col7 {
+    transition-delay: .7s;
+  }
+
+  .col8 {
+    transition-delay: .75s;
+  }
+
+  .col9 {
+    transition-delay: .8s;
+  }
+
+  .col10 {
+    transition-delay: .85s;
+  }
+
+  .col11 {
+    transition-delay: .9s;
+  }
+
+  .col12 {
+    transition-delay: .95s;
+  }
+
+  .menu-open > .shutter > .col1 {
+    transition-delay: .05s;
+  }
+
+  .menu-open > .shutter > .col2 {
+    transition-delay: .1s;
+  }
+
+  .menu-open > .shutter > .col3 {
+    transition-delay: .15s;
+  }
+
+  .menu-open > .shutter > .col4 {
+    transition-delay: .2s;
+  }
+
+  .menu-open > .shutter > .col5 {
+    transition-delay: .25s;
+  }
+
+  .menu-open > .shutter > .col6 {
+    transition-delay: .3s;
+  }
+
+  .menu-open > .shutter > .col7 {
+    transition-delay: .35s;
+  }
+
+  .menu-open > .shutter > .col8 {
+    transition-delay: .4s;
+  }
+
+  .menu-open > .shutter > .col9 {
+    transition-delay: .45s;
+  }
+
+  .menu-open > .shutter > .col10 {
+    transition-delay: .5s;
+  }
+
+  .menu-open > .shutter > .col11 {
+    transition-delay: .55s;
+  }
+
+  .menu-open > .shutter > .col12 {
+    transition-delay: .6s;
+  }
+
   .menu > .container {
     height: 100%;
     opacity: 0;
     filter: blur(2px);
     transform: translateY(60px);
     transition-duration: .35s;
-    transition-delay: 1.2s;
+    transition-delay: 0;
     transition-property: all;
     transition-timing-function: ease-out;
   }
@@ -234,7 +330,7 @@
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
-    transition-delay: 0;
+    transition-delay: 1.2s;
   }
 
   .projects > p {
