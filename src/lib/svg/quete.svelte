@@ -86,7 +86,7 @@
         <text
            xml:space="preserve"
            transform="matrix(1,0,0,-1,62.5234,193.363)"
-           style="font-variant:normal;font-size:24px;font-family:f-0;-inkscape-font-specification:f-0-0;writing-mode:lr-tb;fill:#292a2b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:medium;font-size:24px;font-family:'Poppins';-inkscape-font-specification:f-0-0;writing-mode:lr-tb;fill:#292a2b;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text44"><tspan
              x="0 12.528 21.264 27.167999 33.071999 38.976002 45.383999 57.911999 72.792 89.015999 97.968002 112.536 127.896 133.8 149.16"
              y="0"
