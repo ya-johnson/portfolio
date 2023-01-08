@@ -1,6 +1,6 @@
 
 <svg
-   class="delay-1200 hidden"
+   class="delay-1400 hide"
    viewBox="0 0 123.42243 18.129192"
    version="1.1"
    id="svg5"
