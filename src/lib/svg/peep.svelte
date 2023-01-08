@@ -153,11 +153,6 @@
 
    svg {
       height: min-content;
-      width: 99%;
-      transition: all ease-out .2s;
-   }
-
-   svg:hover {
       width: 100%;
    }
 
