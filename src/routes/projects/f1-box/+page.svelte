@@ -1,5 +1,6 @@
 <script>
   import Bar from '$lib/components/bar.svelte'
+  import Syntax from '$lib/components/syntax.svelte'
   import F1boxHome from '$lib/assests/Screenshot 2022-09-30 at 21-20-44 F1 box.png'
 </script>
 
@@ -62,7 +63,7 @@
     </div>
   </section>
 
-  <Bar type='design' />
+  <Bar text='design • design • design • design •' color='white' />
   <section>
     <div class="container">
       <div class="case-text">
@@ -114,8 +115,8 @@
       </div>
     </div>
   </section>
-  <Bar type='development' />
 
+  <Bar text='development ◆ development ◆' color='yellow'/>
   <section>
     <div class="container">
       <div class="case-text">
@@ -149,6 +150,7 @@
           At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
           Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
         </p>
+        <Syntax language='javascript' source='console.log(syntax)' filePath='/server/server.js'/>
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -184,8 +186,3 @@
   </section>
 
 </main>
-
-
-<style>
-
-</style>

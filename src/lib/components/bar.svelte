@@ -1,36 +1,14 @@
 <script>
-  export let type
+  export let text
+  export let color
 </script>
 
-{#if type === 'idea'}
-  <div class="bar bg-purple">
-    <p class="bar-text">great idea can come from anywhere ~</p>
-    <p class="bar-text">great idea can come from anywhere ~</p>
-    <p class="bar-text">great idea can come from anywhere ~</p>
-    <p class="bar-text">great idea can come from anywhere ~</p>
-  </div>
-{:else if type === 'share'}
-<div class="bar bg-blue">
-  <p class="bar-text">sharing is caring ✽ sharing is caring ✽</p>
-  <p class="bar-text">sharing is caring ✽ sharing is caring ✽</p>
-  <p class="bar-text">sharing is caring ✽ sharing is caring ✽</p>
-  <p class="bar-text">sharing is caring ✽ sharing is caring ✽</p>
+<div class="bar bg-{color}">
+  <p class="bar-text">{text}</p>
+  <p class="bar-text">{text}</p>
+  <p class="bar-text">{text}</p>
+  <p class="bar-text">{text}</p>
 </div>
-{:else if type === 'design'}
-  <div class="bar bg-white">
-    <p class="bar-text">design • design • design • design •</p>
-    <p class="bar-text">design • design • design • design •</p>
-    <p class="bar-text">design • design • design • design •</p>
-    <p class="bar-text">design • design • design • design •</p>
-  </div>
-{:else if type === 'development'}
-  <div class="bar bg-yellow">
-    <p class="bar-text">development ◆ development ◆</p>
-    <p class="bar-text">development ◆ development ◆</p>
-    <p class="bar-text">development ◆ development ◆</p>
-    <p class="bar-text">development ◆ development ◆</p>
-  </div>
-{/if}
 
 <style>
 

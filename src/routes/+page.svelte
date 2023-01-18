@@ -4,7 +4,7 @@
   import Title from '$lib/svg/title.svelte'
   import Polygon from '$lib/svg/polygon.svelte'
   import Peep from '$lib/svg/peep.svelte'
-  import Chickies from '$lib/svg/chickies.svelte'
+  import Quete from '$lib/svg/quete.svelte'
   import F1boxHome from '$lib/assests/Screenshot 2022-09-30 at 21-20-44 F1 box.png'
 
   onMount(() => {
@@ -47,13 +47,13 @@
 
     <div class="about-right delay-400 hide">
       <Peep />
-      <div class="chickies-box delay-1200 hide">
-        <Chickies />
+      <div class="quete-box delay-1200 hide">
+        <Quete />
       </div>
     </div>
   </section>
 
-  <Bar type='idea' />
+  <Bar text='great idea can come from anywhere ~' color='purple'/>
 
   <section class="projects container">
     <h2 class="hide">PROJECTS</h2>
@@ -124,7 +124,7 @@
     </div>
   </section>
 
-  <Bar type='share' />
+  <Bar text='sharing is caring ✽ sharing is caring ✽' color='blue' />
 
   <section class="blog container">
     <h2>Blog</h2>
@@ -193,10 +193,10 @@
     justify-content: start;
   }
 
-  .chickies-box {
+  .quete-box {
     position: absolute;
-    top: -20px;
-    right: -100px;
+    top: -180px;
+    right: -200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,7 +281,7 @@
       padding: 40px 0;
     }
 
-    .chickies-box {
+    .quete-box {
       display: none;
     }
 

@@ -69,7 +69,7 @@
     </div>
   </section>
 
-  <Bar type='design' />
+  <Bar text='design • design • design • design •' color='white' />
   <section>
     <div class="container">
       <div class="case-text">
@@ -130,7 +130,7 @@
       </div>
     </div>
   </section>
-  <Bar type='development' />
+  <Bar text='development ◆ development ◆' color='yellow'/>
 
   <section>
     <div class="container">
