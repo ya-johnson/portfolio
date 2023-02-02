@@ -1,6 +1,7 @@
 <script>
   import { afterUpdate } from 'svelte'
   import { reveal } from '$lib/utils'
+  import { screen } from '../stores'
   import Transition from '$lib/components/transition.svelte'
   import Nav from '$lib/components/nav.svelte'
   import Footer from '$lib/components/footer.svelte'
@@ -11,6 +12,8 @@
   })
 
 </script>
+
+<svelte:window bind:innerWidth={$screen}></svelte:window>
 
 <Transition />
 <Nav />
