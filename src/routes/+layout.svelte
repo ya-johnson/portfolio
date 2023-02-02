@@ -6,6 +6,7 @@
   import Footer from '$lib/components/footer.svelte'
 
   afterUpdate(() => {
+    window.scrollTo(0,0)
     reveal.once()
   })
 

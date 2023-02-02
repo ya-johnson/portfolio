@@ -1,15 +1,9 @@
 <script>
-  import { onMount } from 'svelte'
   import Bar from '$lib/components/bar.svelte'
   import Title from '$lib/svg/title.svelte'
   import Polygon from '$lib/svg/polygon.svelte'
   import Peep from '$lib/svg/peep.svelte'
   import Quete from '$lib/svg/quete.svelte'
-  import F1boxHome from '$lib/assests/Screenshot 2022-09-30 at 21-20-44 F1 box.png'
-
-  onMount(() => {
-    window.scrollTo(0,0)
-  })
 
 </script>
 
@@ -23,7 +17,7 @@
       <Polygon />
       <div class="about-left-text">
         <p>Hi, i'm Yonathan,</p>
-        <h2>I Build things for the Web.</h2>
+        <p>I Build things for the Web.</p>
         <p>
           As Tech enthusiast i'm advocate for Open Source,
           and my work approach motivated by it's principles.
@@ -86,7 +80,7 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src={F1boxHome} alt="">
+        <img src='/images/Screenshot 2022-09-30 at 21-20-44 F1 box.png' alt="">
       </div>
     </div>
 
@@ -119,7 +113,7 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src={F1boxHome} alt="">
+        <img src='/images/Screenshot 2022-09-30 at 21-20-44 F1 box.png' alt="">
       </div>
     </div>
   </section>
@@ -172,6 +166,13 @@
     margin-bottom: 0;
   }
 
+  .about-left-text > p:nth-child(2) {
+    width: 100%;
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
   .about-left-links {
     position: relative;
     margin-top: 40px;
@@ -211,7 +212,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 60px 0;
+    padding: 90px 0;
   }
 
   .proj:not(last-of-type) {
@@ -219,11 +220,11 @@
   }
 
   .proj-left {
-    width: 45%;
+    width: 30%;
   }
   
   .proj-right {
-    width: 50%;
+    width: 62.5%;
   }
 
   .proj-right > img {
