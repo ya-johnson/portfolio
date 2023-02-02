@@ -11,6 +11,7 @@
   --pink-darker: #E17092;
   --pink-dim: #E1709255;
   --yellow: #F5D491;
+  --yellow-darker: #F1C262;
   --yellow-dim: #F5D49144;
   --blue: #c1d3fe;
   --blue-dim: #c1d3fe77;
@@ -51,12 +52,12 @@ h1 {
 }
 
 h2 {
-  font-size: 44px;
+  font-size: 54px;
   line-height: 34px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 20px;
@@ -151,6 +152,10 @@ p {
 
 .bg-blue {
   background-color: var(--blue);
+}
+
+.bg-pink-darker {
+  background-color: var(--pink-darker);
 }
 
 
