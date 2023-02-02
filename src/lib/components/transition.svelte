@@ -1,23 +1,20 @@
 <script>
+  import { page } from '$app/stores'
   import { isMenu } from '../../stores'
 
-  export let path
   let transition
   let transitionClose
-  let isNavMenu
-  
-  $: if (path) reveal()
-  isMenu.subscribe(state => isNavMenu = state)
 
+  $: if ($page.url.pathname) animate()
 
-  const reveal = () => {
+  const animate = () => {
     setTimeout(() => {
-      if (isNavMenu) {
+      if ($isMenu) {
         setTimeout(() => {
-          isMenu.update(state => state = false)
+          $isMenu = false
           transitionClose = null
           transition = null
-          reveal()
+          animate()
         }, 900)
       }
       else if (!transition && !transitionClose) {
@@ -32,7 +29,7 @@
       else {
         transitionClose = null
         transition = null
-        reveal()
+        animate()
       }
     }, 50)
   }

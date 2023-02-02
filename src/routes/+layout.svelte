@@ -1,6 +1,5 @@
 <script>
   import { afterUpdate } from 'svelte'
-  import { page } from '$app/stores'
   import { reveal } from '$lib/utils'
   import Transition from '$lib/components/transition.svelte'
   import Nav from '$lib/components/nav.svelte'
@@ -12,7 +11,7 @@
 
 </script>
 
-<Transition path={$page.url.pathname}/>
-<Nav path={$page.url.pathname}/>
+<Transition />
+<Nav />
 <slot></slot>
 <Footer />

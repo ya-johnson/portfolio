@@ -1,18 +1,17 @@
 <script>
+  import { page } from '$app/stores'
   import { isMenu } from '../../stores'
+  import Email from './email.svelte'
 
-  export let path
   let menu
-  let isNavMenu
 
-  $: if (path) afterNavigate()
-  isMenu.subscribe(state => isNavMenu = state)
+  $: if ($page.url.pathname) afterNavigate()
 
   const toggleMenu = () => !menu ? menu = true : menu = false
 
   const afterNavigate = () => {
-    if (!isNavMenu && menu) {
-      isMenu.update(state => state = true)
+    if (!$isMenu && menu) {
+      $isMenu = true
       menu = false
     }
   }
@@ -33,7 +32,7 @@
   </div>
 </nav>
 
-{#if isNavMenu}
+{#if $isMenu}
   <div class="background"></div>
 {/if}
 
@@ -52,7 +51,7 @@
     <div class="col col2"></div>
     <div class="col col1"></div>
   </div>
-  <div class="container f-jsb">
+  <div class="menu-content container f-jsb">
     <div class="projects f-col">
       <p>Projects</p>
       <a href="/projects/f1-box"><span>01</span> F1 box</a>
@@ -61,6 +60,7 @@
     <div class="info">
       <a href="https://github.com/ya-johnson">github</a>
     </div>
+    <Email color='yellew' position='center-down'/>
   </div>
  </div>
 
@@ -316,6 +316,7 @@
   }
 
   .menu > .container {
+    position: relative;
     height: 100%;
     opacity: 0;
     filter: blur(2px);
