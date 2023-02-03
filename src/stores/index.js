@@ -2,10 +2,16 @@ import { writable } from 'svelte/store'
 
 
 const isMenu = writable()
-const screen = writable()
+const width = writable()
+const height = writable()
+const scrollY = writable()
+const scrollX = writable()
 
 
 export {
-  screen,
-  isMenu
+  width,
+  isMenu,
+  height,
+  scrollY,
+  scrollX
 }
