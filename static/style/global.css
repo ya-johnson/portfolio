@@ -372,6 +372,12 @@ p {
   margin-bottom: 60px;
 }
 
+/* syntax highlight */
+
+.hljs {
+  font-family: 'Source Code Pro', monospace;
+}
+
 
 @media screen and (max-width: 991px) {
 
