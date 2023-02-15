@@ -26,15 +26,14 @@
   .syntax {
     overflow-x: scroll;
     font-family: 'Source Code Pro', monospace;
-    padding: 12px;
+    padding: 18px;
     margin: 60px 0;
-    white-space: pre-wrap;
     box-shadow: #6272a4 8px 8px 0 0;
-    background-color: #282a36;
+    background-color: #282c34;
   }
 
   p {
-    color: #F9F9F9;
+    color: #e5e7eb;
     width: fit-content;
     padding-bottom: 4px;
     border-bottom: solid 2px #6272a4;
