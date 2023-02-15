@@ -1,13 +1,16 @@
 <script>
+  import { scrollY } from '../stores'
   import Bar from '$lib/components/bar.svelte'
   import Title from '$lib/svg/title.svelte'
   import Polygon from '$lib/svg/polygon.svelte'
   import Peep from '$lib/svg/peep.svelte'
   import Quete from '$lib/svg/quete.svelte'
 
+  let y
+
 </script>
 
-<main>
+<main bind:clientHeight={y}>
   <section class="hero container">
     <Title />
   </section>
@@ -33,7 +36,7 @@
           to create things that are engaging, readable and self-explanatory.
         </p>
         <div class="about-left-links delay-400 hide">
-          <a href="/#contact" class="btn bg-pink">Let's Talk</a>
+          <button class="btn bg-pink" on:click={() => $scrollY = y}>Let's Talk</button>
           <a href="https://github.com/ya-johnson/web-dev-resources" class="btn bg-white" target="__blank">Resources</a>
         </div>
       </div>
@@ -133,14 +136,14 @@
 <style>
 
   .hero {
-    height: 100vh;
+    outerHeight: 100vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
   }
 
   .about {
-    height: 100vh;
+    outerHeight: 100vh;
   }
 
   .about-left {
@@ -161,7 +164,7 @@
 
   .about-left-text > p:first-of-type {
     font-size: 24px;
-    line-height: 38px;
+    line-outerHeight: 38px;
     font-weight: 500;
     margin-bottom: 0;
   }
@@ -197,7 +200,7 @@
   .quete-box {
     position: absolute;
     top: -180px;
-    right: -200px;
+    right: -80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,11 +223,11 @@
   }
 
   .proj-left {
-    width: 30%;
+    width: 35%;
   }
   
   .proj-right {
-    width: 62.5%;
+    width: 55%;
   }
 
   .proj-right > img {
@@ -236,7 +239,7 @@
     .about,
     .proj {
       flex-direction: column;
-      height: auto;
+      outerHeight: auto;
     }
 
     .about,
@@ -269,7 +272,7 @@
 
     .about-left-text > p:first-of-type {
       font-size: 22px;
-      line-height: 24px;
+      line-outerHeight: 24px;
     }
 
     .about-left-text > p:nth-of-type(3),
@@ -326,7 +329,7 @@
 
     .about-left-text > p:first-of-type {
       font-size: 18px;
-      line-height: 20px;
+      line-outerHeight: 20px;
     }
 
     .about-left-text > p:nth-of-type(3),
