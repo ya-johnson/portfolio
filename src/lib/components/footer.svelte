@@ -1,10 +1,19 @@
 <script>
+  import Github from './github.svelte'
   import Email from './email.svelte'
 </script>
 
 <footer id="contact">
   <div class="container">
-    <p>Contact Me</p>
+    <div>
+      <div>
+        <p>Contact Me</p>
+        <p> My inbox is always open,</p>
+        <p> whether you want to work to together or just say hi.</p>
+      </div>
+      <!-- <p>Find out what i'm up to on <a href="https://github.com/ya-johnson">Github</a></p> -->
+      <Github color='pink'/>
+    </div>
     <Email color='pink' />
     <p class="rights">@ya-johnson 2022 | Build with SvelteKit</p>
   </div>
@@ -14,7 +23,7 @@
 
   footer {
     position: relative;
-    min-height: 400px;
+    min-height: 440px;
     margin-top: 100px;
     padding-top: 80px;
     border-top: 2px solid var(--black);
@@ -23,15 +32,26 @@
   }
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-width: 960px;
   }
 
-  .container > p:first-of-type {
+  .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .container p {
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  .container > div  p:first-of-type {
     font-weight: 700;
-    font-size: 54px;
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 14px;
   }
 
   .rights {
