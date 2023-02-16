@@ -31,7 +31,6 @@
 </a>
 
 
-
 <style>
 
   a {
@@ -78,6 +77,6 @@
   }
 
   svg {
-    color: var(--black);
+    fill: var(--black);
   }
 </style>
