@@ -4,8 +4,8 @@
 </script>
 
 
-<a href="https://github.com/ya-johnson" target="_blank" rel="noreferrer">
-  <div class="{color}">
+<a href="https://github.com/ya-johnson" target="_blank" rel="noreferrer" class={size}>
+  <div class={color}>
     <svg enable-background="new 0 0 512 512" 
          id="Layer_1" 
          version="1.1" 
@@ -35,8 +35,42 @@
 
   a {
     position: relative;
+  }
+
+  .normal {
     height: 100px;
     width: 100px;
+  }
+
+  .small {
+    height: 50px;
+    width: 50px;
+  }
+
+  .normal > div {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    box-shadow: var(--black) 6px 6px 0 0;
+  }
+
+  .small > div {
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+    box-shadow: var(--black) 4px 4px 0 0;
+  }
+
+  .normal:hover > div {
+    top: 6px;
+    left: 6px;
+    box-shadow: var(--black) 3px 3px 0 0;
+  }
+
+  .small:hover > div {
+    top: 4px;
+    left: 4px;
+    box-shadow: var(--black) 2px 2px 0 0;
   }
 
   .pink {
@@ -60,20 +94,10 @@
     top: 0;
     left: 0;
     cursor: pointer;
-    height: 100px;
-    width: 100px;
     text-align: center;
-    padding: 20px;
     border: 2px solid var(--black);
     border-radius: 100%;
-    box-shadow: var(--black) 6px 6px 0 0;
     transition: all ease-out .15s;
-  }
-
-  div:hover {
-    top: 4px;
-    left: 4px;
-    box-shadow: var(--black) 2px 2px 0 0;
   }
 
   svg {
