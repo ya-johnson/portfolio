@@ -9,8 +9,8 @@ const scrollX = writable()
 
 
 export {
-  width,
   isMenu,
+  width,
   height,
   scrollY,
   scrollX
