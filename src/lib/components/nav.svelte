@@ -1,13 +1,13 @@
 <script>
   import { page } from '$app/stores'
   import { isMenu } from '../../stores'
+  import Github from './github.svelte'
   import Email from './email.svelte'
 
   let menu
-
   $: if ($page.url.pathname) afterNavigate()
 
-  const toggleMenu = () => !menu ? menu = true : menu = false
+  const toggleMenu = () => menu = !menu
 
   const afterNavigate = () => {
     if (!$isMenu && menu) {
@@ -58,9 +58,9 @@
       <a href="/projects/freeze-point"><span>02</span> Freeze Point</a>
     </div>
     <div class="info">
-      <a href="https://github.com/ya-johnson">github</a>
+      <div><Email color='yellow' size='small' /></div>
+      <Github color='yellow' size='small' />
     </div>
-    <Email color='yellew' position='center-down'/>
   </div>
  </div>
 
@@ -348,6 +348,25 @@
 
   .projects > a > span {
     font-size: 1.2rem;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 24px;
+  }
+
+  .info > div {
+    display: flex;
+    justify-content: flex-end;
+    width: 355px;
+    height: 54px;
+    margin-right: 30px;
   }
 
   @media screen and (max-width: 991px) {
