@@ -136,14 +136,14 @@
 <style>
 
   .hero {
-    outerHeight: 100vh;
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
   }
 
   .about {
-    outerHeight: 100vh;
+    height: 100vh;
   }
 
   .about-left {
@@ -164,7 +164,7 @@
 
   .about-left-text > p:first-of-type {
     font-size: 24px;
-    line-outerHeight: 38px;
+    line-height: 38px;
     font-weight: 500;
     margin-bottom: 0;
   }
@@ -239,7 +239,7 @@
     .about,
     .proj {
       flex-direction: column;
-      outerHeight: auto;
+      height: auto;
     }
 
     .about,
@@ -272,7 +272,7 @@
 
     .about-left-text > p:first-of-type {
       font-size: 22px;
-      line-outerHeight: 24px;
+      line-height: 24px;
     }
 
     .about-left-text > p:nth-of-type(3),
@@ -329,7 +329,7 @@
 
     .about-left-text > p:first-of-type {
       font-size: 18px;
-      line-outerHeight: 20px;
+      line-height: 20px;
     }
 
     .about-left-text > p:nth-of-type(3),
