@@ -1,7 +1,9 @@
 <script>
+  import Prism from 'prismjs'
   import { refractor } from 'refractor'
   import jsx from 'refractor/lang/jsx'
   import { toHtml } from 'hast-util-to-html'
+  import 'prism-svelte'
 
   export let filepath
   export let language
@@ -16,7 +18,11 @@
   <p>{filepath}</p>
   <pre>
     <code>
-      {@html toHtml(refractor.highlight(code, language))}
+      {#if language === 'svelte'}
+        {@html Prism.highlight(code, Prism.languages.svelte, 'svelte')}
+      {:else}
+        {@html toHtml(refractor.highlight(code, language))}
+      {/if}
     </code>
   </pre>
 </div>
