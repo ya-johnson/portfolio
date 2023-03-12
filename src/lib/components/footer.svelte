@@ -12,9 +12,9 @@
         <p> whether you want to work to together or just say hi.</p>
       </div>
       <!-- <p>Find out what i'm up to on <a href="https://github.com/ya-johnson">Github</a></p> -->
-      <Github color='pink'/>
+      <Github color='pink' size='normal'/>
     </div>
-    <Email color='pink' />
+    <Email color='pink' size='normal'/>
     <p class="rights">@ya-johnson 2022 | Build with SvelteKit</p>
   </div>
 </footer>
