@@ -51,6 +51,7 @@
     <div class="col col2"></div>
     <div class="col col1"></div>
   </div>
+
   <div class="menu-content container f-jsb">
     <div class="projects f-col">
       <p>Projects</p>
@@ -346,13 +347,17 @@
     font-weight: 500;
   }
 
+  .projects > a:hover {
+    font-weight: 600;
+  }
+
   .projects > a > span {
     font-size: 1.2rem;
   }
 
   .info {
     position: absolute;
-    bottom: 100px;
+    bottom: 40px;
     right: 0;
     width: 100%;
     display: flex;
@@ -365,7 +370,7 @@
     display: flex;
     justify-content: flex-end;
     width: 355px;
-    height: 54px;
+    height: 60px;
     margin-right: 30px;
   }
 
