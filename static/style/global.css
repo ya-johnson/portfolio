@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+
 :root {
   --white: #ffffff;
+  --white-dim: #ffffff97;
   --bg: #EDF6F9;
-  --bg-dim: #ffffff77;
+  --bg-dim: #EDF6F997;
   --purple: #99A9F4;
   --purple-dim: #99A9F444;
   --pink: #EA9AB2;
@@ -87,6 +89,12 @@ p {
   justify-content: space-between;
 }
 
+.f-jc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .f-col {
   display: flex;
   flex-direction: column;
@@ -135,6 +143,10 @@ p {
   left: 4px;
 }
 
+.bg-bg {
+  background-color: var(--bg);
+}
+
 .bg-white {
   background-color: var(--white);
 }
@@ -157,6 +169,10 @@ p {
 
 .bg-pink-darker {
   background-color: var(--pink-darker);
+}
+
+.my-140 {
+  margin: 140px 0;
 }
 
 
@@ -277,7 +293,7 @@ p {
   padding: 2px 4px;
   border: 1px solid var(--black);
   border-radius: 4px;
-  background-color: var(--bg-dim);
+  background-color: var(--white-dim);
 }
 
 .proj-stack-btn:not(last-child) {
@@ -289,6 +305,7 @@ p {
 
 .proj-links {
   position: relative;
+  height: 42px;
   margin-top: 20px;
 }
 
