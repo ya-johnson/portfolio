@@ -1,0 +1,84 @@
+
+.case-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 160px 0;
+  border-bottom: 2px solid var(--black);
+  background-color: var(--purple);
+}
+
+.case-hero > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.case-hero-left {
+  width: 50%;
+}
+
+.case-demo {
+  display: flex;
+  height: 80vh;
+  padding: 120px 0;
+}
+
+.case-demo-left {
+  min-height: 80%;
+}
+
+.case-demo-left > ul {
+  margin-left: 20px;
+}
+
+.case-demo-left > ul > ul {
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.case-demo-left li {
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.case-demo-left li:hover {
+  text-decoration: underline;
+}
+
+.case-demo-right {
+  width: 70%;
+}
+
+.case-demo-right > img {
+  width: 100%;
+}
+
+.case-design {
+  margin: 120px 0;
+}
+
+.case-text {
+  max-width: 740px;
+  margin: 120px auto;
+}
+
+.case-text > p {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .case-hero {
+    padding: 120px 0;
+  }
+
+  .case-hero > .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .case-hero-left {
+    width: 100%;
+  }
+}

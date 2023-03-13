@@ -1,0 +1,42 @@
+/* project stack */
+
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.stack-btn {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  background-color: var(--white-dim);
+}
+
+
+/* project links */
+
+.proj-links {
+  position: relative;
+  height: 42px;
+  margin-top: 20px;
+}
+
+.proj-links > .bg-yellow {
+  left: 100px;
+}
+
+.proj-links > .bg-yellow:hover {
+  left: 102px;
+}
+
+.proj-links > .bg-purple {
+  left: 228px;
+}
+
+.proj-links > .bg-purple:hover {
+  left: 230px;
+}
