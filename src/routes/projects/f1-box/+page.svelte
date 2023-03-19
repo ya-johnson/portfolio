@@ -1,7 +1,8 @@
 <script>
+  import F1BoxHero from '$lib/svg/f1-box-hero.svelte'
   import Bar from '$lib/components/bar.svelte'
   import Syntax from '$lib/components/syntax.svelte'
-  import F1boxHome from '$lib/assests/Screenshot 2022-09-30 at 21-20-44 F1 box.png'
+  import Construction from '$lib/svg/construction.svelte'
 </script>
 
 <main>
@@ -20,20 +21,20 @@
           as well as News and Press gathered from popular publishers.
         </p>
         <div class="proj-stack delay-1400 hide">
-          <p class="proj-stack-btn">Next-Js</p>
-          <p class="proj-stack-btn">Zustand</p>
-          <p class="proj-stack-btn">SWR</p>
-          <p class="proj-stack-btn">Cheerio</p>
-          <p class="proj-stack-btn">Tailwind</p>
+          <p class="stack-btn">Next-Js</p>
+          <p class="stack-btn">Zustand</p>
+          <p class="stack-btn">SWR</p>
+          <a href="https://ergast.com/mrd/" class="stack-btn" target="_blank" rel="noreferrer">Ergrast F1 API</a>
+          <p class="stack-btn">Cheerio</p>
+          <p class="stack-btn">Tailwind</p>
         </div>
-        <p class="delay-1400 hide">
-          Powered by 
-          <a href="https://ergast.com/mrd/" class="underline" target="_blank" rel="noreferrer">Ergrast F1 API.</a>
-        </p>
         <div class="proj-links delay-1600 hide">
           <a href="/" class="btn bg-white">Live</a>
           <a href="/" class="btn bg-yellow">Source</a>
         </div>
+      </div>
+      <div class="case-hero-right">
+        <F1BoxHero />
       </div>
     </div>
   </section>
@@ -58,7 +59,7 @@
         </ul>
       </div>
       <div class="case-demo-right">
-        <img src={F1boxHome} alt="">
+        <!-- <img src={F1boxHome} alt=""> -->
       </div>
     </div>
   </section>
@@ -117,7 +118,10 @@
   </section>
 
   <Bar text='development ◆ development ◆' color='yellow'/>
-  <section>
+  <section class="container py-section f-jc">
+    <Construction />
+  </section>
+  <!-- <section>
     <div class="container">
       <div class="case-text">
         <h3>Introduction</h3>
@@ -150,7 +154,32 @@
           At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
           Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
         </p>
-        <Syntax language='javascript' source='console.log(syntax)' filePath='/server/server.js'/>
+        <Syntax language='jsx' filepath='/server/server.js' 
+                code={`import { useAuthModal, useWindow } from '../hooks'
+import { Login, Register } from './index'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
+
+
+const AuthModal = () => {
+
+  const { authType, toggleAuthModal } = useAuthModal()
+  const { width } = useWindow()
+
+  return (
+    <div className="auth auth-modal-close" 
+         onClick={e => toggleAuthModal(e)}>
+      <div className=${'{`auth-modal ${width >= 500 ? `w-[450px]` : `w-[calc(${width}-16px)]`}`}'}>
+        <div className="auth-close">
+          <AiOutlineCloseCircle className="auth-close-icon" />
+        </div>
+        {authType === 'login' ? <Login /> : <Register />}
+      </div>
+    </div>
+  )
+}
+
+
+export default AuthModal`}/>
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -166,6 +195,23 @@
           At tempor commodo ullamcorper a lacus vestibulum sed. Diam maecenas sed enim ut.
           Nec ultrices dui sapien eget mi proin. Leo duis ut diam quam nulla.
         </p>
+        <Syntax language='javascript' filepath='/f1box/src/services/newsServices.js' 
+                code={`
+  const getMotorsportNews = async () => {
+    const data = await response.data
+
+    const page = cheerio.load(data)
+    const articlesData = page('.ms-item--art, .ms-grid-hor-items-1-2-3-4-5').map((i, article) => {
+      return {
+        header: page(article).find('.ms-item_link--text').text(),
+        image: page(article).find('.ms-item_img--3_2').attr('src'),
+        url: page(article).find('a').attr('href')
+      }
+    }).get()
+
+    const articles = articlesData.filter(article => article.image && article.url).slice(1,13)
+    return articles
+  }`}/>
         <h3>Introduction</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -183,6 +229,6 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
 </main>
