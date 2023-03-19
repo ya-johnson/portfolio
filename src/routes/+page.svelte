@@ -15,7 +15,7 @@
     <Title />
   </section>
 
-  <section class="about container f-jsb">
+  <section class="about container py-section f-jsb">
     <div class="about-left hide">
       <Polygon />
       <div class="about-left-text">
@@ -52,7 +52,7 @@
 
   <Bar text='great idea can come from anywhere ~' color='purple'/>
 
-  <section class="projects container">
+  <section class="projects container py-section">
     <h2 class="hide">PROJECTS</h2>
 
     <div class="proj">
@@ -66,11 +66,11 @@
           from popular publishers.
         </p>
         <div class="proj-stack delay-200 hide">
-          <p class="proj-stack-btn">Next-Js</p>
-          <p class="proj-stack-btn">Zustand</p>
-          <p class="proj-stack-btn">SWR</p>
-          <p class="proj-stack-btn">Cheerio</p>
-          <p class="proj-stack-btn">Tailwind</p>
+          <p class="stack-btn">Next-Js</p>
+          <p class="stack-btn">Zustand</p>
+          <p class="stack-btn">SWR</p>
+          <p class="stack-btn">Cheerio</p>
+          <p class="stack-btn">Tailwind</p>
         </div>
         <p class="delay-200 hide">
             Powered by 
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src='/images/Screenshot 2022-09-30 at 21-20-44 F1 box.png' alt="">
+        <img src='/assets/gifs/f1box.gif' alt="">
       </div>
     </div>
 
@@ -94,20 +94,19 @@
           Freeze Point is a Social Blogging App, with the intention
           of providing platform of knowledge sharing for
           Writers and Readers who apprciate the written word.
-          unAuthenticated Users can acsses published Posts, while
-          Authenticated Users can also Write, Edit, Delete, their
-          own posts, and Like & Comment on other Users posts,
-          as well as Follow other Users or popular Topics.
+          Features Authentication/Authorization, Pagination, Reach Text Editor, Supports
+          Images, CRUD functionality and other cool stuff.
         </p>
         <div class="proj-stack delay-200 hide">
-          <p class="proj-stack-btn">Node-Js</p>
-          <p class="proj-stack-btn">Express</p>
-          <p class="proj-stack-btn">MongoDB</p>
-          <p class="proj-stack-btn">JWT</p>
-          <p class="proj-stack-btn">Cloudinary</p>
-          <p class="proj-stack-btn">React</p>
-          <p class="proj-stack-btn">Zustand</p>
-          <p class="proj-stack-btn">Tailwind</p>
+          <p class="stack-btn">Node-Js</p>
+          <p class="stack-btn">Express</p>
+          <p class="stack-btn">MongoDB</p>
+          <p class="stack-btn">JWT</p>
+          <p class="stack-btn">Cloudinary</p>
+          <p class="stack-btn">React</p>
+          <p class="stack-btn">Zustand</p>
+          <p class="stack-btn">Tailwind</p>
+          <p class="stack-btn">Docker</p>
         </div>
         <div class="proj-links delay-400 hide">
           <a href="/" class="btn bg-white">Live</a>
@@ -116,20 +115,33 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src='/images/Screenshot 2022-09-30 at 21-20-44 F1 box.png' alt="">
+        <img src='/assets/gifs/freeze.gif' alt="">
       </div>
     </div>
   </section>
 
-  <Bar text='sharing is caring ✽ sharing is caring ✽' color='blue' />
+  <!-- <Bar text='sharing is caring ✽ sharing is caring ✽' color='blue' />
 
-  <section class="blog container">
+  <section class="blog container py-section">
     <h2>Blog</h2>
-    <h3>React</h3>
-    <p>01 Navbar - Responsive and Theme toggler with Tailwind</p>
-    <h3>Design</h3>
-    <p>01 Web Design concepts for Developers</p>
-  </section>
+    <div class="blogs">
+      <div class="blog-card">
+        <div class="blog-card-content">
+          <p>01 Navbar - Responsive and Theme toggler with Tailwind</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-content">
+          <p>01 Web Design concepts for Developers</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-content">
+          <p>01 Web Design concepts for Developers</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
 </main>
 
 
@@ -172,6 +184,7 @@
   .about-left-text > p:nth-child(2) {
     width: 100%;
     font-size: 44px;
+    line-height: 48px;
     font-weight: 700;
     margin-bottom: 40px;
   }
@@ -206,20 +219,19 @@
     align-items: center;
   }
 
-  .projects,
-  .blog {
-    padding: 160px 20px;
+  .projects > h2,
+  .blog > h2 {
+    margin-bottom: 80px;
   }
 
   .proj {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 90px 0;
   }
 
-  .proj:not(last-of-type) {
-    margin-bottom: 100px;
+  .proj:first-of-type {
+    margin-bottom: 200px;
   }
 
   .proj-left {
@@ -227,12 +239,39 @@
   }
   
   .proj-right {
-    width: 55%;
+    width: 60%;
   }
 
   .proj-right > img {
     width: 100%;
-  }  
+  }
+
+  .blogs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .blog-card {
+    width: calc(100% / 3 - 30px);
+    border: solid 2px var(--black);
+    transition: all ease-out .15s;
+  }
+
+  .blog-card:hover {
+    box-shadow: var(--black) 6px 6px 0 0;
+  }
+
+  .blog-card-content {
+    padding: 18px;
+    background: var(--white);
+  }
+
+  .blog-card-content > p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 
   @media screen and (max-width: 991px) {
 
@@ -240,12 +279,6 @@
     .proj {
       flex-direction: column;
       height: auto;
-    }
-
-    .about,
-    .projects,
-    .blog {
-      padding: 60px 20px;
     }
 
     .about-left,
@@ -258,16 +291,17 @@
     .about-left {
       display: flex;
       justify-content: center;
+      margin-bottom: 20px;
     }
 
     .about-left-text {
-      top: 15%;
+      top: 5%;
       left: 70%;
       transform: translateX(-50%);
     }
 
     .about-left-text > p:not(:first-of-type) {
-      width: 50%;
+      width: 65%;
     }
 
     .about-left-text > p:first-of-type {
@@ -275,22 +309,22 @@
       line-height: 24px;
     }
 
-    .about-left-text > p:nth-of-type(3),
-    .about-left-text > p:last-of-type {
-      margin-top: 10px;
-    }
-
     .about-right {
       width: 100%;
       padding: 40px 0;
     }
 
-    .quete-box {
-      display: none;
+    .projects > h2,
+    .blog > h2 {
+      margin-bottom: 0;
     }
 
     .proj {
       padding: 40px 0;
+    }
+
+    .proj:first-of-type {
+      margin-bottom: 20px;
     }
 
     .proj-left > p {
@@ -305,13 +339,17 @@
   @media screen and (max-width: 768px) {
 
     .about-left-text {
-      top: 20%;
+      top: 15%;
       left: 55%;
       transform: translateX(-50%);
     }
 
     .about-left-text > p:not(:first-of-type) {
-      width: 75%;
+      width: 85%;
+    }
+
+    .quete-box {
+      right: -100px;
     }
 
     .proj-left > p {
@@ -320,6 +358,10 @@
   }
 
   @media screen and (max-width: 500px) {
+
+    .about-left {
+      margin-bottom: 40px;
+    }
 
     .about-left-text {
       top: 20%;
@@ -332,13 +374,24 @@
       line-height: 20px;
     }
 
-    .about-left-text > p:nth-of-type(3),
-    .about-left-text > p:last-of-type {
-      margin-top: 8px;
+    .about-left-text > p:not(:first-of-type) {
+      width: 90%;
     }
 
     .about-left-links {
       margin-top: 20px;
+    }
+
+    .quete-box {
+      right: -140px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .quete-box {
+      top: -160;
+      right: -160px;
     }
   }
 
