@@ -11,11 +11,12 @@
         <p> My inbox is always open,</p>
         <p> whether you want to work to together or just say hi.</p>
       </div>
-      <!-- <p>Find out what i'm up to on <a href="https://github.com/ya-johnson">Github</a></p> -->
       <Github color='pink' size='normal'/>
     </div>
     <Email color='pink' size='normal'/>
-    <p class="rights">@ya-johnson 2022 | Build with SvelteKit</p>
+    <p class="rights">@ya-johnson 2022 | Build with 
+      <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
+    </p>
   </div>
 </footer>
 

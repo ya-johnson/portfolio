@@ -66,20 +66,21 @@
           from popular publishers.
         </p>
         <div class="proj-stack delay-200 hide">
-          <p class="stack-btn">Next-Js</p>
-          <p class="stack-btn">Zustand</p>
-          <p class="stack-btn">SWR</p>
-          <p class="stack-btn">Cheerio</p>
-          <p class="stack-btn">Tailwind</p>
+          <a href="https://nextjs.org/" class="stack-btn" target="_blank" rel="noreferrer">Next</a>
+          <a href="https://swr.vercel.app/" class="stack-btn" target="_blank" rel="noreferrer">SWR</a>
+          <a href="https://github.com/pmndrs/zustand" class="stack-btn" target="_blank" rel="noreferrer">Zustand</a>
+          <a href="https://cheerio.js.org/" class="stack-btn" target="_blank" rel="noreferrer">Cheerio</a>
+          <a href="https://recharts.org/" class="stack-btn" target="_blank" rel="noreferrer">Recharts</a>
+          <a href="https://tailwindcss.com/" class="stack-btn" target="_blank" rel="noreferrer">Tailwind</a>
         </div>
         <p class="delay-200 hide">
             Powered by 
             <a href="https://ergast.com/mrd/" class="underline" target="_blank" rel="noreferrer">Ergrast F1 API.</a>
         </p>
         <div class="proj-links delay-400 hide">
-          <a href="/" class="btn bg-white">Live</a>
-          <a href="https://github.com/ya-johnson/f1-box" target="_blank" class="btn bg-yellow" rel="noreferrer">Source</a>
-          <a href="/projects/f1-box" class="btn bg-purple">Case Study</a>
+          <a href="https://f1-box.vercel.app/" class="btn bg-white" target="_blank" rel="noreferrer">Live</a>
+          <a href="https://github.com/ya-johnson/f1-box" class="btn bg-yellow" target="_blank" rel="noreferrer">Source</a>
+          <!-- <a href="/projects/f1-box" class="btn bg-purple">Case Study</a> -->
         </div>
       </div>
       <div class="proj-right delay-400 hide">
@@ -94,24 +95,25 @@
           Freeze Point is a Social Blogging App, with the intention
           of providing platform of knowledge sharing for
           Writers and Readers who apprciate the written word.
-          Features Authentication/Authorization, Pagination, Reach Text Editor, Supports
+          Features Auth, Pagination, Search, Rich Text Editor, Supports
           Images, CRUD functionality and other cool stuff.
         </p>
         <div class="proj-stack delay-200 hide">
-          <p class="stack-btn">Node-Js</p>
-          <p class="stack-btn">Express</p>
-          <p class="stack-btn">MongoDB</p>
-          <p class="stack-btn">JWT</p>
-          <p class="stack-btn">Cloudinary</p>
-          <p class="stack-btn">React</p>
-          <p class="stack-btn">Zustand</p>
-          <p class="stack-btn">Tailwind</p>
-          <p class="stack-btn">Docker</p>
+          <a href="https://nodejs.org/" class="stack-btn" target="_blank" rel="noreferrer">Node</a>
+          <a href="http://expressjs.com/" class="stack-btn" target="_blank" rel="noreferrer">Express</a>
+          <a href="https://www.mongodb.com/" class="stack-btn" target="_blank" rel="noreferrer">MongoDB</a>
+          <a href="https://jwt.io/" class="stack-btn" target="_blank" rel="noreferrer">JWT</a>
+          <a href="https://cloudinary.com/" class="stack-btn" target="_blank" rel="noreferrer">Cloudinary</a>
+          <a href="http://reactjs.org/" class="stack-btn" target="_blank" rel="noreferrer">React</a>
+          <a href="https://github.com/molefrog/wouter" class="stack-btn" target="_blank" rel="noreferrer">Wouter</a>
+          <a href="https://github.com/pmndrs/zustand" class="stack-btn" target="_blank" rel="noreferrer">Zustand</a>
+          <a href="https://tailwindcss.com/" class="stack-btn" target="_blank" rel="noreferrer">Tailwind</a>
+          <a href="https://www.docker.com/" class="stack-btn" target="_blank" rel="noreferrer">Docker</a>
         </div>
         <div class="proj-links delay-400 hide">
-          <a href="/" class="btn bg-white">Live</a>
-          <a href="https://github.com/ya-johnson/freeze-point" target="__blank" class="btn bg-yellow">Source</a>
-          <a href="/projects/freeze-point" class="btn bg-purple">Case Study</a>
+          <a href="https://freezepoint-client.vercel.app/" class="btn bg-white" target="_blank" rel="noreferrer">Live</a>
+          <a href="https://github.com/ya-johnson/freeze-point" class="btn bg-yellow" target="_blank" rel="noreferrer">Source</a>
+          <!-- <a href="/projects/freeze-point" class="btn bg-purple">Case Study</a> -->
         </div>
       </div>
       <div class="proj-right delay-400 hide">
@@ -244,6 +246,7 @@
 
   .proj-right > img {
     width: 100%;
+    border: 2px solid var(--black);
   }
 
   .blogs {
@@ -273,7 +276,7 @@
     font-weight: 600;
   }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1140px) {
 
     .about,
     .proj {
@@ -334,6 +337,8 @@
     .proj-right {
       margin-top: 80px;
     }
+
+
   }
 
   @media screen and (max-width: 768px) {
