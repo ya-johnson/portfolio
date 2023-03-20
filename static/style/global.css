@@ -35,6 +35,7 @@ body {
   line-height: 30px;
   color: var(--black);
   background-color: var(--bg);
+  transition: all ease-out .3s;
   overflow-x: hidden;
 }
 
@@ -81,6 +82,10 @@ p {
   max-width: 1600px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.py-section {
+  margin: 140px auto;
 }
 
 .f-jsb {
@@ -169,10 +174,6 @@ p {
 
 .bg-pink-darker {
   background-color: var(--pink-darker);
-}
-
-.my-140 {
-  margin: 140px 0;
 }
 
 
@@ -301,24 +302,8 @@ p {
     font-size: 28px;
   }
 
-  .proj-links {
-    margin-top: 20px;
-  }
-
-  .proj-links > .bg-yellow {
-    left: 88px;
-  }
-  
-  .proj-links > .bg-yellow:hover {
-    left: 90px;
-  }
-  
-  .proj-links > .bg-purple {
-    left: 200px;
-  }
-  
-  .proj-links > .bg-purple:hover {
-    left: 202px;
+  .py-section {
+    margin: 60px auto;
   }
 }
 

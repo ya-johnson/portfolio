@@ -4,16 +4,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .stack-btn {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 14px;
   padding: 6px;
   border: 1px solid var(--black);
   border-radius: 4px;
   background-color: var(--white-dim);
+}
+
+.stack-btn:hover {
+  background-color: var(--white);
 }
 
 
@@ -22,7 +26,7 @@
 .proj-links {
   position: relative;
   height: 42px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .proj-links > .bg-yellow {
@@ -39,4 +43,27 @@
 
 .proj-links > .bg-purple:hover {
   left: 230px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .proj-links {
+    margin-top: 20px;
+  }
+
+  .proj-links > .bg-yellow {
+    left: 88px;
+  }
+  
+  .proj-links > .bg-yellow:hover {
+    left: 90px;
+  }
+  
+  .proj-links > .bg-purple {
+    left: 200px;
+  }
+  
+  .proj-links > .bg-purple:hover {
+    left: 202px;
+  }
 }

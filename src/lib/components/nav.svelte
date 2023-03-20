@@ -55,8 +55,18 @@
   <div class="menu-content container f-jsb">
     <div class="projects f-col">
       <p>Projects</p>
-      <a href="/projects/f1-box"><span>01</span> F1 box</a>
-      <a href="/projects/freeze-point"><span>02</span> Freeze Point</a>
+      <div>
+        <p><span>01</span> F1 box -</p>
+        <a href="https://f1-box.vercel.app/" target="_blank" rel="noreferrer">Live</a>
+        <span>|</span>
+        <a href="https://github.com/ya-johnson/f1-box" target="_blank" rel="noreferrer">Source</a>
+      </div>
+      <div>
+        <p><span>02</span> Freeze Point -</p>
+        <a href="https://freezepoint-client.vercel.app/" target="_blank" rel="noreferrer">Live</a>
+        <span>|</span>
+        <a href="https://github.com/ya-johnson/freeze-point" target="_blank" rel="noreferrer">Source</a>
+      </div>
     </div>
     <div class="info">
       <div><Email color='yellow' size='small' /></div>
@@ -342,16 +352,32 @@
     margin-bottom: 40px;
   }
 
-  .projects > a {
-    font-size: 2rem;
-    font-weight: 500;
+  .projects > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
-  .projects > a:hover {
+  .projects > div > p {
+    font-size: 2rem;
     font-weight: 600;
   }
 
-  .projects > a > span {
+  .projects > div > a,
+  .projects > div > span {
+    margin-bottom: 12px;
+  }
+
+  .projects > div > a {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .projects > div > a:hover {
+    font-weight: 600;
+  }
+
+  .projects > div > p > span {
     font-size: 1.2rem;
   }
 
