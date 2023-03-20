@@ -5,7 +5,7 @@
   let vi
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('yonathan@yajohnson.xyz')
+    navigator.clipboard.writeText('yonathan@yajohnson.com')
     vi.innerHTML = '✔'
     setTimeout(() => {
       vi.innerHTML = ''
@@ -16,7 +16,7 @@
 
 <div class="box">
   <div class="email {color} {size}" on:click={copyEmail} on:keydown={copyEmail}>
-    yonathan@yajohnson.xyz
+    yonathan@yajohnson.com
     <div class="copy" bind:this={vi}></div>
   </div>
 </div>
