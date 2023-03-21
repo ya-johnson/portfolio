@@ -203,7 +203,29 @@
 
 
 <style>
+
    svg {
       width: 50%;
+   }
+
+   @media screen and (max-width: 768px) {
+      
+      svg {
+         width: 35%;
+      }
+   }
+
+   @media screen and (max-width: 500px) {
+
+      svg {
+         width: 30%;
+      }
+   }
+
+   @media screen and (max-width: 400px) {
+
+      svg {
+         width: 25%;
+      }
    }
 </style>

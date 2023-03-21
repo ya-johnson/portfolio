@@ -153,7 +153,7 @@
 
    svg {
       height: min-content;
-      width: 100%;
+      width: 85%;
    }
 
 </style>
