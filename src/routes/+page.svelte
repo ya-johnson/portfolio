@@ -188,7 +188,7 @@
     font-size: 44px;
     line-height: 48px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .about-left-links {
@@ -285,7 +285,6 @@
     }
 
     .about-left,
-    .about-left-text,
     .proj-left,
     .proj-right {
       width: 100%;
@@ -294,17 +293,15 @@
     .about-left {
       display: flex;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
     }
 
     .about-left-text {
-      top: 5%;
-      left: 70%;
+      width: 80%;
+      top: 10%;
+      left: 60%;
+      padding: 0 20px;
       transform: translateX(-50%);
-    }
-
-    .about-left-text > p:not(:first-of-type) {
-      width: 65%;
     }
 
     .about-left-text > p:first-of-type {
@@ -313,13 +310,13 @@
     }
 
     .about-right {
-      width: 100%;
+      width: 80%;
       padding: 40px 0;
     }
 
     .projects > h2,
     .blog > h2 {
-      margin-bottom: 0;
+      margin-bottom: 12px;
     }
 
     .proj {
@@ -327,7 +324,7 @@
     }
 
     .proj:first-of-type {
-      margin-bottom: 20px;
+      margin-bottom: 60px;
     }
 
     .proj-left > p {
@@ -335,26 +332,52 @@
     }
 
     .proj-right {
-      margin-top: 80px;
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+
+    .about-left-text {
+      width: 90%;
+      top: 15%;
+      left: 55%;
+      transform: translateX(-50%);
+    }
+    
+    .about-left-text > p:nth-child(2) {
+      margin-bottom: 20px;
     }
 
+    .quete-box {
+      right: -120px;
+    }
 
+    .proj {
+      padding: 20px 0;
+    }
   }
 
   @media screen and (max-width: 768px) {
 
     .about-left-text {
-      top: 15%;
-      left: 55%;
+      left: 50%;
       transform: translateX(-50%);
     }
 
     .about-left-text > p:not(:first-of-type) {
-      width: 85%;
+      width: 100%;
+    }
+
+    .about-left-text > p:nth-child(2) {
+      font-size: 34px;
+      line-height: 38px;
+      width: 100%;
     }
 
     .quete-box {
-      right: -100px;
+      top: -200px;
+      right: -160px;
     }
 
     .proj-left > p {
@@ -365,11 +388,11 @@
   @media screen and (max-width: 500px) {
 
     .about-left {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .about-left-text {
-      top: 20%;
+      width: 100%;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -379,25 +402,18 @@
       line-height: 20px;
     }
 
-    .about-left-text > p:not(:first-of-type) {
-      width: 90%;
-    }
-
     .about-left-links {
       margin-top: 20px;
     }
 
     .quete-box {
-      right: -140px;
+      right: -180px;
     }
   }
 
   @media screen and (max-width: 400px) {
 
-    .quete-box {
-      top: -160;
-      right: -160px;
-    }
+
   }
 
 </style>

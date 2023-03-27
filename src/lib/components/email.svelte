@@ -14,7 +14,7 @@
 
 </script>
 
-<div class="box">
+<div class="box hide delay-400">
   <div class="email {color} {size}" on:click={copyEmail} on:keydown={copyEmail}>
     yonathan@yajohnson.com
     <div class="copy" bind:this={vi}></div>
@@ -118,29 +118,58 @@
     box-shadow: var(--black) 3px 3px 0 0;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
 
-    .email {
-      font-size: 32px;
-      padding: 20px;
+    .normal {
+      font-size: 54px;
+      padding: 30px;
     }
 
-    .copy {
+    .normal > .copy {
+      height: 32px;
+      width: 24px;
+      margin-left: 20px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .normal {
+      font-size: 44px;
+      padding: 30px;
+    }
+
+    /* .normal > .copy {
       height: 28px;
       width: 22px;
       margin-left: 20px;
+    } */
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .normal {
+      font-size: 34px;
+      padding: 24px;
+    }
+
+    .normal > .copy {
+      height: 28px;
+      width: 22px;
+      margin-left: 20px;
+      border-radius: 6px;
     }
   }
 
   @media screen and (max-width: 600px) {
 
-    .email {
+    .normal {
       font-size: 28px;
       padding: 14px;
       border-radius: 12px;
     }
 
-    .copy {
+    .normal > .copy {
       height: 20px;
       width: 16px;
       margin-left: 12px;
@@ -150,10 +179,20 @@
 
   @media screen and (max-width: 500px) {
 
-    .email {
+    .normal {
       font-size: 20px;
       padding: 12px;
       border-radius: 12px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .normal,
+    .small {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 10px;
     }
   }
 </style>

@@ -5,9 +5,9 @@
 
 <footer id="contact">
   <div class="container">
+    <p class="title">Contact Me</p>
     <div>
-      <div>
-        <p>Contact Me</p>
+      <div class="hide delay-200">
         <p> My inbox is always open,</p>
         <p> whether you want to work to together or just say hi.</p>
       </div>
@@ -43,43 +43,46 @@
     margin-bottom: 40px;
   }
 
-  .container p {
+  .container > div  p {
     line-height: 20px;
     margin-bottom: 4px;
+    margin-right: 40px;
   }
 
-  .container > div  p:first-of-type {
+  .title {
     font-weight: 700;
     font-size: 38px;
     line-height: 40px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .rights {
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
     font-weight: 500;
-    transform: translateX(-50%);
+    text-align: center;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 991px) {
 
-    footer {
-      min-height: 340px;
+    .container > div {
+      padding-right: 20px;
     }
   }
 
   @media screen and (max-width: 600px) {
 
-    footer {
-      min-height: 280px;
-    }
 
   }
 
   @media screen and (max-width: 500px) {
 
+    footer {
+      min-height: 380px;
+    }
   }
 
 </style>
