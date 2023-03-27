@@ -4,7 +4,7 @@
 </script>
 
 
-<a href="https://github.com/ya-johnson" target="_blank" rel="noreferrer" class={size}>
+<a href="https://github.com/ya-johnson" target="_blank" rel="noreferrer" class="hide delay-400 {size}">
   <div class={color}>
     <svg enable-background="new 0 0 512 512" 
          id="Layer_1" 
@@ -103,4 +103,47 @@
   svg {
     fill: var(--black);
   }
+
+  @media screen and (max-width: 768px) {
+
+    .normal {
+      height: 76px;
+      width: 76px;
+    }
+
+    .normal > div {
+      height: 76px;
+      width: 76px;
+      padding: 14px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .normal {
+      height: 60px;
+      width: 60px;
+    }
+
+    .normal > div {
+      height: 60px;
+      width: 60px;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .normal {
+      height: 50px;
+      width: 50px;
+    }
+
+    .normal > div {
+      height: 50px;
+      width: 50px;
+      padding: 10px;
+    }
+  }
+
 </style>

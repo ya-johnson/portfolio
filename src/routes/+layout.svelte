@@ -18,7 +18,17 @@
                bind:scrollY={$scrollY}
                bind:scrollX={$scrollX} />
 
-<Transition />
-<Nav />
-<slot></slot>
-<Footer />
+<div class="svelte-root">
+  <Transition />
+  <Nav />
+  <slot></slot>
+  <Footer />
+</div>
+
+
+<style>
+  
+  .svelte-root {
+    overflow-x: hidden;
+  }
+</style>

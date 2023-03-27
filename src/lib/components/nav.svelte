@@ -426,6 +426,52 @@
       width: 14px;
     }
 
+    .projects > p {
+      font-size: 34px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .projects > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .projects > div > p {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .projects > div > a,
+    .projects > div > span {
+      margin-bottom: 12px;
+    }
+
+    .projects > div > a {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .projects > div > a:hover {
+      font-weight: 600;
+    }
+
+    .projects > div > p > span {
+      font-size: 1rem;
+    }
+
+    .info {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+
+    .info > div {
+      width: 320px;
+      margin-top: 20px;
+      margin-right: 0;
+    }
   }
 
 </style>
