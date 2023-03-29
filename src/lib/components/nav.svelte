@@ -410,6 +410,10 @@
 
   @media screen and (max-width: 768px) {
 
+    nav {
+      padding-top: 20px;
+    }
+
     .logo {
       font-size: 16px;
       line-height: 22px;
@@ -468,7 +472,7 @@
     }
 
     .info > div {
-      width: 320px;
+      width: 100%;
       margin-top: 20px;
       margin-right: 0;
     }

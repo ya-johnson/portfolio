@@ -5,9 +5,9 @@
 
 <footer id="contact">
   <div class="container">
-    <p class="title">Contact Me</p>
     <div>
       <div class="hide delay-200">
+        <p class="title">Contact Me</p>
         <p> My inbox is always open,</p>
         <p> whether you want to work to together or just say hi.</p>
       </div>
@@ -43,17 +43,17 @@
     margin-bottom: 40px;
   }
 
-  .container > div  p {
-    line-height: 20px;
-    margin-bottom: 4px;
-    margin-right: 40px;
-  }
-
   .title {
     font-weight: 700;
     font-size: 38px;
     line-height: 40px;
     margin-bottom: 8px;
+  }
+
+  .container > div p:not(:first-of-type) {
+    line-height: 20px;
+    margin-bottom: 4px;
+    margin-right: 40px;
   }
 
   .rights {
@@ -75,6 +75,9 @@
 
   @media screen and (max-width: 600px) {
 
+    .container > div {
+      align-items: flex-end;
+    }
 
   }
 
