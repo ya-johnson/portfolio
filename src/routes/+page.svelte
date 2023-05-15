@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src='/assets/gifs/f1box.gif' alt="" loading="lazy">
+        <img src='/assets/gifs/f1box-small.gif' alt="" loading="lazy">
       </div>
     </div>
 
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="proj-right delay-400 hide">
-        <img src='/assets/gifs/freeze.gif' alt="" loading="lazy">
+        <img src='/assets/gifs/freeze-small.gif' alt="" loading="lazy">
       </div>
     </div>
   </section>
